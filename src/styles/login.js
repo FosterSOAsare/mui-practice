@@ -1,18 +1,19 @@
+import { flex } from "./styles";
+
 const loginStyles = {
 	login__left__section: {
 		backgroundColor: "#FFFFFF",
 		width: "100%",
 		height: "100vh",
-		display: "block",
+		display: "flex",
+		...flex("center", "center"),
 	},
 	login__right__section: {
 		backgroundColor: "#F3F5F9",
 		width: "100%",
 		height: "100vh",
-		display: "flex",
-		justifyContent: "center",
-		alignItems: "center",
-		flexDirection: "column",
+
+		...flex("center", "center", "column"),
 	},
 	half__circle: {
 		width: 200,
@@ -24,6 +25,23 @@ const loginStyles = {
 		backgroundColor: "#6440BB",
 		transform: "rotate(180deg)",
 	},
-	bottom__half__circle: {},
+	forgotPassword: {
+		fontSize: "12px",
+		color: "#6440BB",
+		fontWeight: "bold",
+		"&:hover": {
+			cursor: "pointer",
+			textDecoration: "underline",
+		},
+	},
+
+	login__cta: {
+		width: "100%",
+		height: "40px",
+		marginBottom: "20px",
+		textTransform: "none",
+		fontWeight: "bold",
+	},
 };
+
 export default loginStyles;
